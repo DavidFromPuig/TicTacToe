@@ -19,7 +19,7 @@ public class Main {
         } else if (menuChoice == 3) {
             settings(menuChoice);
         } else if (menuChoice == 4) {
-            exit(menuChoice);
+            exit();
         } else {
             badChoice(menuChoice);
         }
@@ -36,7 +36,7 @@ public class Main {
         System.out.println("You have chosen to adjust the game. (" + menuChoice + ")");
         mainMenu();
     }
-    private static void exit(short menuChoice){
+    private static void exit(){
         System.out.println("Noooo :( why would you do that?! Exiting...");
         mainMenu();
     }
