@@ -17,14 +17,11 @@ public class Main {
         } else if (menuChoice == 2) {
             continueM(menuChoice);
         } else if (menuChoice == 3) {
-            System.out.println("You have chosen to adjust the game. (" + menuChoice + ")");
-            mainMenu();
+            settings(menuChoice);
         } else if (menuChoice == 4) {
-            System.out.println("Noooo :( why would you do that?! Exiting...");
-            mainMenu();
+            exit(menuChoice);
         } else {
-            System.out.println("That is not a valid choice *raises one eyebrow* (" + menuChoice + ")");
-            mainMenu();
+            badChoice(menuChoice);
         }
     }
     private static void newGame(short menuChoice){
@@ -35,5 +32,16 @@ public class Main {
         System.out.println("The option you have chosen is to continue a game. (" + menuChoice + ")");
         mainMenu();
     }
-    //it is needed to do the methods for settings and quit, good afternoon <3
+    private static void settings(short menuChoice){
+        System.out.println("You have chosen to adjust the game. (" + menuChoice + ")");
+        mainMenu();
+    }
+    private static void exit(short menuChoice){
+        System.out.println("Noooo :( why would you do that?! Exiting...");
+        mainMenu();
+    }
+    private static void badChoice(short menuChoice){
+        System.out.println("That is not a valid choice *raises one eyebrow* (" + menuChoice + ")");
+        mainMenu();
+    }
 }
