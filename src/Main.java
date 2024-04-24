@@ -2,8 +2,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         mainMenu();
         TUI tui = new TUI();
+        Joc joc = new Joc();
     }
     private static void mainMenu() {
         Scanner sc = new Scanner(System.in);
