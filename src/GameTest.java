@@ -16,16 +16,22 @@ class GameTest {
         Game game = new Game();
         game.newGame();
 
+        /* Understable version
         char[][] esperat = new char[3][3];
         char[][] trobat = game.getBoard();
-
         assertArrayEquals(esperat, trobat);
+        */
+        assertArrayEquals(new char[3][3], game.getBoard());
+
+
     }
 
     @org.junit.jupiter.api.Test
     void play() throws ExecutionControl.NotImplementedException {
         Game game = new Game();
         game.newGame();
-        game.play();
+        game.play(0,0);
+
+        assertEquals(game.getBoard()[0][0],'O');
     }
 }

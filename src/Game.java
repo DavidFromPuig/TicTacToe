@@ -16,7 +16,7 @@ public class Game {
         this.board = new char[3][3];
         this.playerTurn = true;
     }
-    public void play() throws ExecutionControl.NotImplementedException {
+    public void play(int posY, int posX) throws ExecutionControl.NotImplementedException {
         throw new ExecutionControl.NotImplementedException("");
     }
     public void winnerMove(){
