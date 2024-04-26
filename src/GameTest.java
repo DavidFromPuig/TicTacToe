@@ -4,6 +4,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GameTest {
 
+    //Test de new Game que llama a newGame_player y newGame_board
+    @org.junit.jupiter.api.Test
+    void testnewGame() throws ExecutionControl.NotImplementedException {
+        newGame_player();
+        newGame_board();
+    }
     @org.junit.jupiter.api.Test
     void newGame_player() throws ExecutionControl.NotImplementedException {
         Game game = new Game();
@@ -31,7 +37,8 @@ class GameTest {
         Game game = new Game();
         game.newGame();
         game.play(0,0);
-
-        assertEquals(game.getBoard()[0][0],'O');
+        assertEquals(game.getBoard()[0][0],'o');
     }
+
+
 }
