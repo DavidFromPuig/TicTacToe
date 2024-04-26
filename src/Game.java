@@ -1,19 +1,19 @@
 import jdk.jshell.spi.ExecutionControl;
 
 public class Game {
-    private int[][] blankBoard;
+    private char[][] board;
     private boolean playerTurn;
 
-    public int[][] getBlankBoard() {
-        return blankBoard;
+    public char[][] getBoard() {
+        return board;
     }
 
     public boolean isPlayerTurn() {
         return playerTurn;
     }
 
-    public void newGame(){
-        this.blankBoard = new int[3][3];
+    public void newGame() throws ExecutionControl.NotImplementedException {
+        this.board = new char[3][3];
         this.playerTurn = true;
     }
     public void play() throws ExecutionControl.NotImplementedException {
