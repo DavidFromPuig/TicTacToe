@@ -5,7 +5,7 @@ public class Main {
 
         mainMenu();
         TUI tui = new TUI();
-        Joc joc = new Joc();
+        Game game = new Game();
     }
     private static void mainMenu() {
         Scanner sc = new Scanner(System.in);

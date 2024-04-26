@@ -1,6 +1,6 @@
 import jdk.jshell.spi.ExecutionControl;
 
-public class Joc {
+public class Game {
     private int[][] blankBoard;
     private boolean playerTurn;
 

@@ -1,18 +1,16 @@
-import org.junit.jupiter.api.Assertions;
-
 import static org.junit.jupiter.api.Assertions.*;
 
-class JocTest {
+class GameTest {
 
     @org.junit.jupiter.api.Test
     void newGame_jugador() {
-        Joc j = new Joc();
+        Game j = new Game();
         assertTrue(j.isPlayerTurn());
     }
 
     @org.junit.jupiter.api.Test
     void newGame_taulell() {
-        Joc j = new Joc();
+        Game j = new Game();
         assertEquals([][], j.getBlankBoard());
     }
 
