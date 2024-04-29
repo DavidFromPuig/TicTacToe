@@ -36,8 +36,9 @@ class GameTest {
     void play() throws ExecutionControl.NotImplementedException {
         Game game = new Game();
         game.newGame();
-        game.play(0,0);
-        assertEquals(game.getBoard()[0][0],'o');
+        short y = 0, x = 0;
+        game.play(y,x);
+        assertEquals(game.getBoard()[y][x],'O');
     }
 
 
