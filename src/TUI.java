@@ -1,3 +1,5 @@
+import jdk.jshell.spi.ExecutionControl;
+
 import java.util.Scanner;
 
 public class TUI {
@@ -13,7 +15,7 @@ public class TUI {
             if (menuChoice == 1) {
                 Main.newGame(menuChoice);
             } else if (menuChoice == 2) {
-                Main.continueM(menuChoice);
+                Main.loadGame(menuChoice);
             } else if (menuChoice == 3) {
                 Main.settings(menuChoice);
             } else if (menuChoice == 4) {
@@ -24,6 +26,14 @@ public class TUI {
         } catch (Exception ex) {
             Main.badChoice();
         }
-
+    }
+    public static void showBoard() throws ExecutionControl.NotImplementedException {
+        throw new ExecutionControl.NotImplementedException("");
+    }
+    public static void pickMove() throws ExecutionControl.NotImplementedException {
+        throw new ExecutionControl.NotImplementedException("");
+    }
+    public static void endGame() throws ExecutionControl.NotImplementedException {
+        throw new ExecutionControl.NotImplementedException("");
     }
 }

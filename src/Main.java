@@ -10,7 +10,7 @@ public class Main {
         System.out.println("The option you have chosen is to create a new game! (" + menuChoice + ")");
         TUI.showMenu();
     }
-    public static void continueM(short menuChoice){
+    public static void loadGame(short menuChoice){
         System.out.println("The option you have chosen is to continue a game. (" + menuChoice + ")");
         TUI.showMenu();
     }
