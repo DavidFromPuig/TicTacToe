@@ -6,6 +6,8 @@ public class Main {
         Game game = new Game();
 
     }
+
+
     public static void newGame(short menuChoice){
         System.out.println("The option you have chosen is to create a new game! (" + menuChoice + ")");
         TUI.showMenu();

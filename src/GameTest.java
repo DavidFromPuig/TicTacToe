@@ -1,8 +1,10 @@
 import jdk.jshell.spi.ExecutionControl;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class GameTest {
+
 
     //Test de new Game que llama a newGame_player y newGame_board
     @org.junit.jupiter.api.Test
@@ -42,4 +44,23 @@ class GameTest {
     }
 
 
+    @Test
+    void getBoard() {
+    }
+
+    @Test
+    void isPlayerTurn() {
+    }
+
+    @Test
+    void newGame() {
+    }
+
+    @Test
+    void testPlay() {
+    }
+
+    @Test
+    void winnerMove() {
+    }
 }
