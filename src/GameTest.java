@@ -12,6 +12,7 @@ class GameTest {
         newGame_player();
         newGame_board();
     }
+
     @org.junit.jupiter.api.Test
     void newGame_player() throws ExecutionControl.NotImplementedException {
         Game game = new Game();
@@ -39,28 +40,21 @@ class GameTest {
         Game game = new Game();
         game.newGame();
         short y = 0, x = 0;
-        game.play(y,x);
-        assertEquals(game.getBoard()[y][x],'O');
+        game.play(y, x);
+        assertEquals(game.getBoard()[y][x], 'O');
+    }
+
+    @org.junit.jupiter.api.Test //Bucle que comprueba si cada casilla del tablero está vacia
+    void blankBoard() {
+        Game game = new Game();
+        game.blankBoard();
+        for (int i = 0; i < game.board.length; ++i) {
+            for (int j = 0; j < game.board.length; ++j) {
+                assertEquals(game.board[i][j], ' ');
+            }
+        }
+
     }
 
 
-    @Test
-    void getBoard() {
-    }
-
-    @Test
-    void isPlayerTurn() {
-    }
-
-    @Test
-    void newGame() {
-    }
-
-    @Test
-    void testPlay() {
-    }
-
-    @Test
-    void winnerMove() {
-    }
 }
