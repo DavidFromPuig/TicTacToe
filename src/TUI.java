@@ -9,8 +9,7 @@ public class TUI {
         System.out.println("Welcome to the Tic Tac Toe menu!\nWhat do you want to do?\n- 1 New game\n- 2 Continue\n- 3 Settings\n- 4 Quit");
         System.out.print("Your choice (1-4): ");
         try {
-            short menuChoice = TUI.sc.nextShort();
-            return menuChoice;
+            return TUI.sc.nextShort();
 
         } catch (Exception ex) {
             return badChoice();

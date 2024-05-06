@@ -5,13 +5,13 @@ public class Main {
         short menuChoice = tui.showMenu();
         Game game = new Game();
         if (menuChoice == 1) {
-            newGame();
+            newGame(menuChoice, tui);
         } else if (menuChoice == 2) {
-            loadGame();
+            loadGame(menuChoice, tui);
         } else if (menuChoice == 3) {
-            settings();
+            settings(menuChoice, tui);
         } else if (menuChoice == 4) {
-            exit();
+            exit(tui);
         }
 
     }
