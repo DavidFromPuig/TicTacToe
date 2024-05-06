@@ -41,7 +41,7 @@ class GameTest {
         game.newGame();
         short y = 0, x = 0;
         game.play(y, x);
-        assertEquals(game.getBoard()[y][x], 'O');
+        assertEquals('O',game.getBoard()[y][x]);
     }
 
     @org.junit.jupiter.api.Test //Bucle que comprueba si cada casilla del tablero está vacia

@@ -29,21 +29,21 @@ public class Game{
     public void play(int posY, int posX) throws ExecutionControl.NotImplementedException { // este método maneja el proceso de juego para colocar fichas en el tablero, alternando y verificando si una posición ya está ocupada antes de colocar una ficha.
 
         if(playerTurn){
-            if(getBoard()[posY][posX] == ' '){
+            if(getBoard()[posY][posX] != 'O' || getBoard()[posY][posX] != 'X'){
                 getBoard()[posY][posX]='O';
                 playerTurn = false;
             }
             else {
-                System.out.println("Casilla ocupada");
+                System.out.println("Casilla ocupada del player true");
             }
         }
         else {
-            if(getBoard()[posY][posX] == ' '){
+            if(getBoard()[posY][posX] != 'O' || getBoard()[posY][posX] != 'X'){
                 getBoard()[posY][posX]='X';
                 playerTurn = true;
             }
             else {
-                System.out.println("Casilla ocupada");
+                System.out.println("Casilla ocupada del player false");
             }
         }
         //throw new ExecutionControl.NotImplementedException("");
