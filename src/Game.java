@@ -10,6 +10,8 @@ public class Game{
     }
     //Lo que quiere decir que después de llamar a este método, el tablero estará vacío y listo para ser utilizado.
 
+
+
     private boolean playerTurn;
 
     public char[][] getBoard() {

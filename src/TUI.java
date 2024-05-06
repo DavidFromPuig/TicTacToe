@@ -20,9 +20,9 @@ public class TUI {
             } else if (menuChoice == 3) {
                 Main.settings(menuChoice);
             } else if (menuChoice == 4) {
-                exit(menuChoice);
+                Main.exit(menuChoice);
             } else {
-                badChoice(menuChoice);
+                Main.badChoice(menuChoice);
             }
 
             return  menuChoice;
