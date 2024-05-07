@@ -30,7 +30,14 @@ class GameTest {
         char[][] trobat = game.getBoard();
         assertArrayEquals(esperat, trobat);
         */
-        assertArrayEquals(new char[3][3], game.getBoard());
+        //assertArrayEquals(new char[3][3], game.getBoard());
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                assertEquals('-', game.getBoard()[i][j]);
+
+            }
+        }
+
 
 
     }

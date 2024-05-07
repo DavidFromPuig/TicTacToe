@@ -1,6 +1,5 @@
 import jdk.jshell.spi.ExecutionControl;
 import java.util.Scanner;
-import static java.lang.System.exit;
 
 public class TUI {
     static Scanner sc = new Scanner(System.in);
@@ -14,7 +13,7 @@ public class TUI {
             menuChoice = TUI.sc.nextShort();
 
             if (menuChoice == 1) {
-                Main.newGame(menuChoice);
+                Main.newGameOption(menuChoice);
             } else if (menuChoice == 2) {
                 Main.loadGame(menuChoice);
             } else if (menuChoice == 3) {
@@ -34,9 +33,6 @@ public class TUI {
     public static short badChoice(short menuChoice){
         System.out.println("That is not a valid choice *raises one eyebrow*");
         return showMenu();
-    }
-    public void showBoard() throws ExecutionControl.NotImplementedException {
-        throw new ExecutionControl.NotImplementedException("");
     }
     public void pickMove() throws ExecutionControl.NotImplementedException {
         throw new ExecutionControl.NotImplementedException("");
