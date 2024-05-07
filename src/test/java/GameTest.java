@@ -1,5 +1,5 @@
 import jdk.jshell.spi.ExecutionControl;
-import org.junit.jupiter.api.Test;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -48,9 +48,9 @@ class GameTest {
     void blankBoard() {
         Game game = new Game();
         game.blankBoard();
-        for (int i = 0; i < game.board.length; ++i) {
-            for (int j = 0; j < game.board.length; ++j) {
-                assertEquals(game.board[i][j], ' ');
+        for (int i = 0; i < game.getBoard().length; ++i) {
+            for (int j = 0; j < game.getBoard().length; ++j) {
+                assertEquals('-',game.getBoard()[i][j]);
             }
         }
 
