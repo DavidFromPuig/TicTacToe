@@ -34,6 +34,16 @@ public class TUI {
         System.out.println("That is not a valid choice *raises one eyebrow*");
         return showMenu();
     }
+
+    public void showBoard(char[][] board, boolean playerTurn) throws ExecutionControl.NotImplementedException {
+        //throw new ExecutionControl.NotImplementedException("");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(board[i][j]);
+            }
+            System.out.println();
+        }
+    }
     public void pickMove() throws ExecutionControl.NotImplementedException {
         throw new ExecutionControl.NotImplementedException("");
     }

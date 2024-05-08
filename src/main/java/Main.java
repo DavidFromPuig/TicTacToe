@@ -5,12 +5,14 @@ public class Main {
         TUI tui = new TUI();
         TUI.showMenu();
         Game game = new Game();
-
     }
     public static void newGameOption(short menuChoice) throws ExecutionControl.NotImplementedException {
         System.out.println("The option you have chosen is to create a new game! (" + menuChoice + ")");
         Game game = new Game();
-        game.showBoard();
+        TUI tui = new TUI();
+        game.newGame();
+        tui.showBoard(game.getBoard(), game.isPlayerTurn());
+        //game.showBoard();
         //TUI.showMenu();
     }
     public static void loadGame(short menuChoice){
