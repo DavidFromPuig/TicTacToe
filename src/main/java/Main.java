@@ -3,17 +3,36 @@ import jdk.jshell.spi.ExecutionControl;
 public class Main {
     public static void main(String[] args) {
         TUI tui = new TUI();
-        TUI.showMenu();
         Game game = new Game();
+
+        menu:
+        while (true) {
+            short opt = tui.showMenu();
+
+            switch (opt) {
+                case 1:
+                    newGameOption(game, tui);
+                    break;
+
+                case 2:
+                    break;
+
+                case 3:
+                    break;
+
+                case 4:
+                    break menu;
+            }
+        }
+
+
     }
-    public static void newGameOption(short menuChoice) throws ExecutionControl.NotImplementedException {
-        System.out.println("The option you have chosen is to create a new game! (" + menuChoice + ")");
-        Game game = new Game();
-        TUI tui = new TUI();
+    public static void newGameOption(Game game, TUI tui)  {
+        //System.out.println("The option you have chosen is to create a new game! (" + menuChoice + ")");
         game.newGame();
         tui.showBoard(game.getBoard(), game.isPlayerTurn());
-        //game.showBoard();
-        //TUI.showMenu();
+        //recollir jugada (bucle a dins)
+
     }
     public static void loadGame(short menuChoice){
         System.out.println("The option you have chosen is to continue a game. (" + menuChoice + ")");

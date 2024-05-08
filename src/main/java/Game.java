@@ -4,7 +4,7 @@ public class Game{
     char[][] board = new char[3][3];
 
     //This method prepares the board, the turn
-    public void newGame() throws ExecutionControl.NotImplementedException {
+    public void newGame() {
         this.board = new char[3][3];
         for (int i = 0; i < board.length; ++i) {
             for (int j = 0; j < board.length; ++j) {
