@@ -17,7 +17,7 @@ class GameTest {
     void newGame_player() throws ExecutionControl.NotImplementedException {
         Game game = new Game();
         game.newGame();
-        assertTrue(game.isPlayerTurn());
+        assertTrue(game.isPlayerTurn()%2!=0);
     }
 
     @org.junit.jupiter.api.Test
@@ -37,9 +37,6 @@ class GameTest {
 
             }
         }
-
-
-
     }
 
     @org.junit.jupiter.api.Test
@@ -60,8 +57,5 @@ class GameTest {
                 assertEquals('-',game.getBoard()[i][j]);
             }
         }
-
     }
-
-
 }

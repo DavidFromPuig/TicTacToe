@@ -45,6 +45,8 @@ public class Main {
     }
     public static void exit(TUI tui){
         //System.out.println("Noooo :( why would you do that?! Exiting...");
+        tui.message("You are exiting the program.");
+
     }
     public static void badChoice(){
         //System.out.println("That is not a valid choice *raises one eyebrow*");

@@ -15,7 +15,7 @@ public class TUI {
         return showMenu();
     }
 
-    public void showBoard(char[][] board, boolean playerTurn) {
+    public void showBoard(char[][] board, short playerTurn) {
         //throw new ExecutionControl.NotImplementedException("");
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -23,11 +23,15 @@ public class TUI {
             }
             System.out.println();
         }
+        System.out.println("Is the turn for the player " + playerTurn + ".");
     }
     public void pickMove() throws ExecutionControl.NotImplementedException {
         throw new ExecutionControl.NotImplementedException("");
     }
     public void endGame() throws ExecutionControl.NotImplementedException {
         throw new ExecutionControl.NotImplementedException("");
+    }
+    public void message(String message) {
+        System.out.println(message);
     }
 }

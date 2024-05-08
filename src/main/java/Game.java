@@ -2,6 +2,7 @@ import jdk.jshell.spi.ExecutionControl;
 
 public class Game{
     char[][] board = new char[3][3];
+    short playerTurn;
 
     //This method prepares the board, the turn
     public void newGame() {
@@ -11,7 +12,7 @@ public class Game{
                 board[i][j] = '-';
             }
         }
-        this.playerTurn = true;
+        this.playerTurn = 1;
     }
 
     public void blankBoard() { //El método recorre cada elemento de la matriz y lo establece como un carácter de espacio (' ').
@@ -23,37 +24,32 @@ public class Game{
     }
     //Lo que quiere decir que después de llamar a este método, el tablero estará vacío y listo para ser utilizado.
 
-
-
-    private boolean playerTurn;
-
     public char[][] getBoard() {
         return board;
     }
 
-    public boolean isPlayerTurn() {
+    public short isPlayerTurn() {
         return playerTurn;
     }
 
-
     public void play(int posY, int posX) throws ExecutionControl.NotImplementedException { // este método maneja el proceso de juego para colocar fichas en el tablero, alternando y verificando si una posición ya está ocupada antes de colocar una ficha.
 
-        if(playerTurn){
+        if(playerTurn % 2 != 0){
             if(getBoard()[posY][posX] != 'O' || getBoard()[posY][posX] != 'X'){
                 getBoard()[posY][posX]='O';
-                playerTurn = false;
+                playerTurn++;
             }
             else {
-                System.out.println("Casilla ocupada del player true");
+                System.out.println("That tile is not empty, true");
             }
         }
         else {
             if(getBoard()[posY][posX] != 'O' || getBoard()[posY][posX] != 'X'){
                 getBoard()[posY][posX]='X';
-                playerTurn = true;
+                playerTurn++;
             }
             else {
-                System.out.println("Casilla ocupada del player false");
+                System.out.println("That tile is not, false");
             }
         }
         //throw new ExecutionControl.NotImplementedException("");
