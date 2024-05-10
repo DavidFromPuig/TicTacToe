@@ -25,9 +25,18 @@ public class TUI {
         }
         System.out.println("Is the turn for the player " + playerTurn + ".");
     }
-    public void pickMove() throws ExecutionControl.NotImplementedException {
+    public void pickMove(int i, int j ) throws ExecutionControl.NotImplementedException {
         throw new ExecutionControl.NotImplementedException("");
+        // if(i < 0 || i >= 3 || j < 0 || j >= 3 || board[i][j] !='-'){
+            //return false; // El movimiento que intenta el jugador es invalido
+            //board[i][j] = 'X'; //La X marca el movimiento para el jugador actual
+
+        System.out.println("Ingresa la fila:");
+        posY = sc.nextInt();
+        System.out.println("Ingresa la columna");
+        posX = sc.nextInt();
     }
+
     public void endGame() throws ExecutionControl.NotImplementedException {
         throw new ExecutionControl.NotImplementedException("");
     }
