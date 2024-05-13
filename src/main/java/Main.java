@@ -30,10 +30,15 @@ public class Main {
 
 
     }
-    public static void newGameOption(Game game, TUI tui)  {
+    private static void newGameOption(Game game, TUI tui)  {
         //System.out.println("The option you have chosen is to create a new game! (" + menuChoice + ")");
+
         game.newGame();
         tui.showBoard(game.getBoard(), game.isPlayerTurn());
+        while (game.winnerMove() == false) {
+            game.play(tui.pickMove());
+            tui.showBoard(game.getBoard(), game.isPlayerTurn());
+        }
         //recollir jugada (bucle a dins)
 
     }

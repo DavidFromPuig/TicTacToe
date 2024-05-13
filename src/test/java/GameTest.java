@@ -43,9 +43,11 @@ class GameTest {
     void play() throws ExecutionControl.NotImplementedException {
         Game game = new Game();
         game.newGame();
-        short y = 0, x = 0;
-        game.play(y, x);
-        assertEquals('O',game.getBoard()[y][x]);
+        short[] pos = new short[2];
+        pos[0] = 0;
+        pos[1] = 0;
+        game.play(pos);
+        assertEquals('O',game.getBoard()[pos[0]][pos[1]]);
     }
 
     @org.junit.jupiter.api.Test //Bucle que comprueba si cada casilla del tablero está vacia

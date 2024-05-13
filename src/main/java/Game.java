@@ -28,11 +28,10 @@ public class Game{
         return playerTurn;
     }
 
-    public void play(int posY, int posX) throws ExecutionControl.NotImplementedException { // este método maneja el proceso de juego para colocar fichas en el tablero, alternando y verificando si una posición ya está ocupada antes de colocar una ficha.
-
+    public void play(short[] pos) { // este método maneja el proceso de juego para colocar fichas en el tablero, alternando y verificando si una posición ya está ocupada antes de colocar una ficha.
         if(playerTurn % 2 != 0){
-            if(getBoard()[posY][posX] != 'O' || getBoard()[posY][posX] != 'X'){
-                getBoard()[posY][posX]='O';
+            if(getBoard()[pos[0]][pos[1]] == '-'){   //getBoard()[pos[0]][pos[1]] != 'O' || getBoard()[pos[0]][pos[1]] != 'X'
+                getBoard()[pos[0]][pos[1]]='O';
                 playerTurn++;
             }
             else {
@@ -40,18 +39,18 @@ public class Game{
             }
         }
         else {
-            if(getBoard()[posY][posX] != 'O' || getBoard()[posY][posX] != 'X'){
-                getBoard()[posY][posX]='X';
+            if(getBoard()[pos[0]][pos[1]] == '-'){ //getBoard()[pos[0]][pos[1]] != 'O' || getBoard()[pos[0]][pos[1]] != 'X'
+                getBoard()[pos[0]][pos[1]]='X';
                 playerTurn++;
             }
             else {
-                System.out.println("That tile is not, false");
+                System.out.println("That tile is not empty, false");
             }
         }
         //throw new ExecutionControl.NotImplementedException("");
     }
 
-    public void winnerMove() throws ExecutionControl.NotImplementedException {
-        throw new ExecutionControl.NotImplementedException("");
+    public boolean winnerMove() {
+        return false;
     }
 }
