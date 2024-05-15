@@ -40,17 +40,15 @@ public class Main {
             tui.showBoard(game.getBoard(), game.isPlayerTurn());
         }
         //recollir jugada (bucle a dins)
-
     }
+
     public static void loadGame(Game game, TUI tui){
-        //System.out.println("The option you have chosen is to continue a game. (" + menuChoice + ")");
     }
     public static void settings(Game game, TUI tui){
         //System.out.println("You have chosen to adjust the game. (" + menuChoice + ")");
     }
     public static void exit(TUI tui){
         //System.out.println("Noooo :( why would you do that?! Exiting...");
-        tui.message("You are exiting the program.");
 
     }
     public static void badChoice(){

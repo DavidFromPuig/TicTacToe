@@ -10,23 +10,22 @@ public class TUI {
 
         return sc.nextShort();
     }
-    public short badChoice(short menuChoice){
-        System.out.println("That is not a valid choice *raises one eyebrow*");
-        return showMenu();
-    }
 
     public void showBoard(char[][] board, short playerTurn) {
+        TUI.message("Starting a new game");
         //throw new ExecutionControl.NotImplementedException("");
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                System.out.print(board[i][j]);
+                System.out.print("|" + board[i][j] + "|");
             }
             System.out.println();
         }
-        System.out.println("Is the turn for the player " + playerTurn + ".");
+        System.out.println("It's player " + playerTurn + "'s turn.");
     }
+
+
     // Crea un array con dos posiciones [0] = Y, [1] = X que leera por el escaner y las devolvera, normalment este metodo es ejecutado por el metodo play() que usara esos dos aprametros para la jugada.
-    // Falta añadirle un filtro para las casillas para que solo permita valores existentes del boardy
+    // Falta añadirle un filtro para las casillas para que solo permita valores existentes del board
     public short[] pickMove()  {
         System.out.println("Y and X values: ");
         short[] pos = new short[2];
@@ -47,7 +46,8 @@ public class TUI {
     public void endGame() throws ExecutionControl.NotImplementedException {
         throw new ExecutionControl.NotImplementedException("");
     }
-    public void message(String message) {
+    public static void message(String message) {
         System.out.println(message);
     }
+
 }
