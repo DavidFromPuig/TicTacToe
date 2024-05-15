@@ -1,7 +1,7 @@
 import jdk.jshell.spi.ExecutionControl;
 
 public class Game{
-    char[][] board = new char[3][3];
+    private char[][] board;
     short playerTurn;
 
     //Esto prepara el tablero
@@ -12,7 +12,8 @@ public class Game{
     }
 
     public void blankBoard() { //El método recorre cada elemento de la matriz y lo establece como un carácter de espacio ('|').
-        for (int i = 0; i < board.length; ++i) {
+        board = new char[3][3];
+    for (int i = 0; i < board.length; ++i) {
             for (int j = 0; j < board.length; ++j) {
                 board[i][j] = ' ';
             }
