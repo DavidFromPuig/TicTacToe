@@ -10,6 +10,7 @@ class GameTest {
     @org.junit.jupiter.api.Test
     void testnewGame() throws ExecutionControl.NotImplementedException {
         newGame_player();
+        newGame_board();
     }
 
     @org.junit.jupiter.api.Test

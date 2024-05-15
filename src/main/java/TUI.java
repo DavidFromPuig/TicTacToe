@@ -12,7 +12,7 @@ public class TUI {
     }
 
     public void showBoard(char[][] board, short playerTurn) {
-        TUI.message("Starting a new game");
+        TUI.message("Starting a new game :) ");
         //throw new ExecutionControl.NotImplementedException("");
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
