@@ -35,7 +35,7 @@ public class Main {
 
         game.newGame();
         tui.showBoard(game.getBoard(), game.isPlayerTurn());
-        while (game.winnerMove() == false) {
+        while (!game.winnerMove()) {
             game.play(tui.pickMove());
             tui.showBoard(game.getBoard(), game.isPlayerTurn());
         }
