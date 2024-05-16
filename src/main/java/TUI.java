@@ -33,10 +33,10 @@ public class TUI {
 
         pos[0] = sc.nextShort();
         pos[1] = sc.nextShort();
-       return pos;
+        return pos;
         // if(i < 0 || i >= 3 || j < 0 || j >= 3 || board[i][j] !='-'){
-            //return false; // El movimiento que intenta el jugador es invalido
-            //board[i][j] = 'X'; //La X marca el movimiento para el jugador actual
+        //return false; // El movimiento que intenta el jugador es invalido
+        //board[i][j] = 'X'; //La X marca el movimiento para el jugador actual
 
         //System.out.println("Ingresa la fila:");
         //posY = sc.nextInt();
