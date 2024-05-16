@@ -27,20 +27,15 @@ public class Main {
                     break menu;
             }
         }
-
-
     }
+    //Crea un nuevo juego, muestra el tablero a partir de lo anterior y recoge la jugada asi cambiando el tablero hasta que detecta una jugada ganadora o un empate.
     private static void newGameOption(Game game, TUI tui)  {
-        //System.out.println("The option you have chosen is to create a new game! (" + menuChoice + ")");
-
         game.newGame();
-        tui.showBoard(game.getBoard(), game.isPlayerTurn());
+        tui.showBoard(game.getBoard());
         while (game.winnerMove() == false) {
-            game.play(tui.pickMove());
-            tui.showBoard(game.getBoard(), game.isPlayerTurn());
+            game.play(tui.pickMove(game.isPlayerTurn()));
+            tui.showBoard(game.getBoard());
         }
-        //recollir jugada (bucle a dins)
-
     }
     public static void loadGame(Game game, TUI tui){
         //System.out.println("The option you have chosen is to continue a game. (" + menuChoice + ")");
@@ -48,8 +43,8 @@ public class Main {
     public static void settings(Game game, TUI tui){
         //System.out.println("You have chosen to adjust the game. (" + menuChoice + ")");
     }
+    //Avisa de que estas saliendo del programa
     public static void exit(TUI tui){
-        //System.out.println("Noooo :( why would you do that?! Exiting...");
         tui.message("You are exiting the program.");
 
     }
