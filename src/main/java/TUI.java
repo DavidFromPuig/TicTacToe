@@ -1,8 +1,15 @@
 import jdk.jshell.spi.ExecutionControl;
+
+import java.io.IOException;
+import java.io.FileWriter;
 import java.util.Scanner;
+import java.io.File;
 
 public class TUI {
     Scanner sc = new Scanner(System.in);
+    File dir = new File("newDir");
+    File file = new File("newDir/config.txt");
+
     //Muestra el menu con sus opciones y devuelve el valor de la opción escogida
     public short showMenu() {
         System.out.println("\n********************\n| TIC TAC TOE v0.1 |\n********************");
@@ -32,7 +39,7 @@ public class TUI {
     // Empieza especificando el turno del jugador
     // Crea un array con dos posiciones [0] = Y, [1] = X que leera por el escaner y las devolvera, normalment este metodo es ejecutado por el metodo play() que usara esos dos aprametros para la jugada.
     // Falta añadirle un filtro para las casillas para que solo permita valores existentes del board
-    public short[] pickMove(short playerTurn)  {
+    public short[] pickMove(short playerTurn) {
         System.out.println("Is the turn for the player " + playerTurn + ".");
         System.out.println("Y and X values: ");
         short[] pos = new short[2];
@@ -56,5 +63,27 @@ public class TUI {
     // Este metodo sirve para que se puedan hacer prints simples desde otros metodos
     public void message(String message) {
         System.out.println(message);
+    }
+    public void createDir() {
+        boolean created = dir.mkdir();
+        if (created) {
+            System.out.println("Directory succesfully created.");
+        }else {
+            System.out.println("I'm sorry but I couldn't create the directory :(");
+        }
+    }
+    public void createFile() throws IOException {
+        if (file.createNewFile()) {
+            System.out.println("File created: " + file.getName());
+        }else {
+            System.out.println("The file already exists.");
+        }
+    }
+    public void writeFile() throws IOException {
+        String toSave = "This is supposed to be saved.";
+        FileWriter myWriter = new FileWriter("config.txt");
+        myWriter.write(toSave);
+        myWriter.close();
+        System.out.println("File successfully written.");
     }
 }

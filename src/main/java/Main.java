@@ -1,7 +1,10 @@
 import jdk.jshell.spi.ExecutionControl;
 
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+
         TUI tui = new TUI();
         Game game = new Game();
 
@@ -37,7 +40,10 @@ public class Main {
             tui.showBoard(game.getBoard());
         }
     }
-    public static void loadGame(Game game, TUI tui){
+    public static void loadGame(Game game, TUI tui) throws IOException {
+        tui.createDir();
+        tui.createFile();
+        tui.writeFile();
         //System.out.println("The option you have chosen is to continue a game. (" + menuChoice + ")");
     }
     public static void settings(Game game, TUI tui){
