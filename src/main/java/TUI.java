@@ -9,6 +9,7 @@ public class TUI {
     Scanner sc = new Scanner(System.in);
     File dir = new File("newDir");
     File file = new File("newDir/config.txt");
+    File fileAlone = new File("config.txt");
 
     //Muestra el menu con sus opciones y devuelve el valor de la opción escogida
     public short showMenu() {
@@ -75,6 +76,13 @@ public class TUI {
     public void createFile() throws IOException {
         if (file.createNewFile()) {
             System.out.println("File created: " + file.getName());
+        }else {
+            System.out.println("The file already exists.");
+        }
+    }
+    public void createFileAlone() throws IOException {
+        if (fileAlone.createNewFile()) {
+            System.out.println("File created: " + fileAlone.getName());
         }else {
             System.out.println("The file already exists.");
         }
